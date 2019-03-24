@@ -1,13 +1,33 @@
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
+@media (max-width: 1620px) {
+  .wrapper {
+    width: 1440px;
+  }
+}
+@media (max-width: 1440px) {
+  .wrapper {
+    width: 1200px;
+  }
+}
 @media (max-width: 1200px) {
-  header {
+  .wrapper {
+    width: 992px;
     padding: 45px 40px;
   }
 }
 /* Medium Devices, Desktops */
+@media (max-width: 992px) {
+  .wrapper {
+    width: 768px;
+  }
+}
 /* Small Devices, Tablets */
 @media (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+    padding: 30px;
+  }
   .navigation {
     width: 30px;
   }
@@ -23,7 +43,7 @@
 }
 /* Extra Small Devices, Phones */
 @media (max-width: 560px) {
-  header {
+  .wrapper {
     padding: 30px 15px;
   }
 }

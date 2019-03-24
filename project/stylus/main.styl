@@ -66,16 +66,20 @@ a
 	transition .2s color ease-in
 	text-decoration none
 
+.wrapper
+	margin 0 auto
+	width 1620px
+	padding 45px 30px
 
 
 header 
 	background-color #000
-	height 100vh
-	padding 45px 60px
-	display flex
-	flex-direction: column
-	justify-content space-between
-	align-items: stretch
+	.wrapper
+		height 100vh		
+		display flex
+		flex-direction: column
+		justify-content space-between
+		align-items: stretch
 
 .top-line
 	display flex
@@ -106,7 +110,7 @@ header
 		border none
 		user-select none
 		position relative
-		z-index 3
+		z-index 5
 	&-bar 
 		display inline-block
 		position absolute
@@ -134,7 +138,7 @@ header
 .navigation
 	&-list.show
 		margin 0 auto
-		z-index 2
+		z-index 4
 		position fixed
 		display flex
 		flex-direction column
@@ -146,6 +150,7 @@ header
 		align-items center
 		transform: translateX(0)
 		transition all .3s ease
+		background-color #000
 		.navigation-item
 			margin 10px 0
 
