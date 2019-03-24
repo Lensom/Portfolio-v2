@@ -48,6 +48,7 @@ img
 ul 
 	margin 0
 	padding 0
+	cursor default
 
 li 
 	list-style-type none
@@ -63,5 +64,150 @@ p
 
 a
 	transition .2s color ease-in
+	text-decoration none
+
+
+
+header 
+	background-color #000
+	height 100vh
+	padding 45px 60px
+	display flex
+	flex-direction: column
+	justify-content space-between
+	align-items: stretch
+
+.top-line
+	display flex
+	justify-content: space-between
+
+.navigation	
+	&-list		
+	&-item
+		display inline-block
+		margin-right 30px
+		a 
+			color #fff
+			display inline-block
+			text-transform uppercase
+			font-family $default-fontBold 
+			font-size 16px
+			border-bottom 2px solid transparent 
+			&:hover
+				color #e70023
+	&-btn
+		display none
+		cursor pointer
+		width 30px
+		height 30px
+		background-color transparent
+		outline 1px solid transparent
+		transition all 0.3 ease
+		border none
+		user-select none
+		position relative
+		z-index 3
+	&-bar 
+		display inline-block
+		position absolute
+		top 0
+		left 0
+		width 30px
+		height 2px
+		background-color #fff
+		transition .3s all ease
+	.bar-2
+		top 8px
+	.bar-3
+		top 16px
+	.active
+		.bar-1
+			background-color transparent
+		.bar-2
+			transform translateY(0px) rotate(-45deg)
+		.bar-3
+			transform translateY(-8px) rotate(45deg)
+
+	.current
+		border-bottom 2px solid #e70023
+	
+.navigation
+	&-list.show
+		margin 0 auto
+		z-index 2
+		position fixed
+		display flex
+		flex-direction column
+		width 100%
+		height 100%
+		top 0
+		left 0
+		justify-content center
+		align-items center
+		transform: translateX(0)
+		transition all .3s ease
+		.navigation-item
+			margin 10px 0
+
+.social
+	display flex
+	justify-content space-between
+	z-index 3
+	&-list 
+		position relative
+		&:after 
+			position absolute
+			top 0
+			right -16px
+			content ''
+			width 6px
+			height 96%
+			background-image: linear-gradient(to bottom, #000000, #3b111c, #740f28, #ae012c, #e70023);
+	a
+		color #ffff
+		font-size 22px
+		&:hover
+			color #e70023
+
+.logo 
+	color #fff
+	position relative
+	a 
+		position absolute
+		bottom 0
+
+.main
+	color #fff
+	display flex
+	justify-content space-between
+
+.language
+	z-index 3
+	position relative
+	
+	&-list
+	&-item
+		display inline-block
+		margin-left 10px
+		a
+			color #fff
+			display inline-block
+			font-size 16px
+			font-family $default-fontBold
+			text-transform uppercase
+			border-bottom 2px solid transparent
+			&:hover
+				color #e70023
+	&:after 
+		position absolute
+		top 4px
+		right -16px
+		content ''
+		width 6px
+		height 100%
+		background-image: linear-gradient(to top, #000000, #3b111c, #740f28, #ae012c, #e70023);
+	.current
+		border-bottom 2px solid #e70023
+
 
 @import "_media.styl" // Always at the end

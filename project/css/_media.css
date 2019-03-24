@@ -1,0 +1,30 @@
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media (max-width: 1200px) {
+  header {
+    padding: 45px 40px;
+  }
+}
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+@media (max-width: 768px) {
+  .navigation {
+    width: 30px;
+  }
+  .navigation-list {
+    -webkit-transform: translateX(-1000%);
+        -ms-transform: translateX(-1000%);
+            transform: translateX(-1000%);
+  }
+  .navigation-btn {
+    display: block;
+    margin-top: 5px;
+  }
+}
+/* Extra Small Devices, Phones */
+@media (max-width: 560px) {
+  header {
+    padding: 30px 15px;
+  }
+}
+/* Custom, iPhone Retina */
