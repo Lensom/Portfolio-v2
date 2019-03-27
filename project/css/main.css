@@ -115,6 +115,13 @@ header .wrapper {
       -ms-flex-align: stretch;
           align-items: stretch;
 }
+.title {
+  position: relative;
+}
+.title h2 {
+  color: #fff;
+  z-index: 10;
+}
 .top-line {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -307,6 +314,86 @@ header .wrapper {
 }
 .language .current {
   border-bottom: 2px solid #e70023;
+}
+.work {
+  background-color: #000;
+  position: relative;
+}
+.work-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+.work-full {
+  -webkit-transform: translateX(-200%);
+      -ms-transform: translateX(-200%);
+          transform: translateX(-200%);
+  -webkit-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  border-radius: 3px;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  background-color: #000;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.work-full-wrapper-img {
+  width: 50%;
+  overflow: scroll;
+}
+.work-text {
+  width: 50%;
+  padding-left: 30px;
+  color: #fff;
+}
+.work .opened {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
+.close-btn {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  z-index: 10;
+  border-radius: 50%;
+}
+.close-bar {
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  left: 5px;
+  top: 14px;
+  background-color: #000;
+}
+.bar-2 {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.bar-1 {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 @media (max-width: 1620px) {
   .wrapper {

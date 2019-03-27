@@ -18,6 +18,15 @@ $(document).ready(function() {
     if ($(window).width() <= 768) {
       $('.navigation-list').removeClass('show');
     }
+
+  $('.work-link').on('click', function(e) {
+    e.preventDefault();
+    var k = $(this).data('target');
+    $('#' + k + '').addClass('opened');
+
+    });
+
+
   
 
 });
