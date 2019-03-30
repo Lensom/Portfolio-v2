@@ -46,7 +46,7 @@
 					<ul class="navigation-list">
 						<li class="navigation-item"><a href="#">Обо мне</a></li>
 						<li class="navigation-item"><a href="#">Мои навыки</a></li>
-						<li class="navigation-item"><a href="#">Мои работы</a></li>
+						<li class="navigation-item"><a href="#work">Мои работы</a></li>
 						<li class="navigation-item"><a href="#">Контакты</a></li>
 					</ul>
 				</nav>
@@ -90,11 +90,7 @@
 		
 	</header>
 
-	<div class="work">
-		<a href="#" class="close-btn">
-			<span class="close-bar bar-1"></span>
-			<span class="close-bar bar-2"></span>
-		</a>
+	<div class="work" id="work">
 		<div class="wrapper">
 			<div class="title">
 				<h2>Мои работы</h2>
@@ -105,14 +101,29 @@
 						<a href="#" class="work-link" data-target="1"><img src="img/work-item.png" alt=""></a>
 					</div>
 					<div class="work-full" id="1">
+						<a href="#" class="close-btn">
+							<span class="close-bar bar-1"></span>
+							<span class="close-bar bar-2"></span>
+						</a>
 						<div class="work-full-wrapper-img">
-							<img src="img/fullsize.png" alt="">
+							<img src="img/aparment.png" alt="">
 						</div>
 						<div class="work-text">
-							<h1>lorem lorem lorem lore ml o r eml orem  lo remloremlorem</h1>
-							<h1>lorem lorem lorem lore ml o r eml orem  lo remloremlorem</h1>
-							<h1>lorem lorem lorem lore ml o r eml orem  lo remloremlorem</h1>
-							<h1>lorem lorem lorem lore ml o r eml orem  lo remloremlorem</h1>
+							<h2 class="work-title">M3 Architects</h2>
+							<h3 class="work-type">Одностраничный сайт</h3>
+							Ссылка на работу: <a href="https://apartment.od.ua/" lass="work-link" target="_blank">https://apartment.od.ua/</a>
+							<div class="work-list">
+								<div class="work-job">Выполненная работа:</div>
+								<ul>
+									<li>
+										- Верстка
+									</li>
+								</ul>
+							</div>
+							<div class="work-description">
+									Программирование интернет-магазина на CMS 1С-Битрикс. Умный фильтр, разработка собственного компонента оформления заказа, оплата заказа без авторизации, продажа товара с характеристиками, структура каталога по категориям и брендам.
+							</div>
+							<a href="https://apartment.od.ua/" class="btn btn-link" target="_blank">Посетить веб-сайт</a>
 						</div>
 					</div>	
 				</div>
@@ -130,7 +141,6 @@
 	</footer>
 
 	<!-- You can add scripts to gulpfile.js -->
-	<script src="js/vivus.min.js"></script>
 	<script src="js/scripts.js"></script>
 </body>
 </html>

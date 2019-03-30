@@ -4,19 +4,13 @@
 
 // all
 *
-	-webkit-box-sizing border-box
-	-moz-box-sizing border-box
 	box-sizing border-box
-	&:before, &:after
-		-webkit-box-sizing border-box
-		-moz-box-sizing border-box
+	&:before,
+	&:after
 		box-sizing border-box
 
 // placeholder
-*::-webkit-input-placeholder,
-*:-moz-placeholder,
-*::-moz-placeholder,
-*:-ms-input-placeholder
+::placeholder
 	color #666
 	opacity 1
 
@@ -73,7 +67,7 @@ a
 
 
 header 
-	background-color #000
+	background-color $black
 	.wrapper
 		height 100vh		
 		display flex
@@ -84,7 +78,7 @@ header
 .title
 	position relative
 	h2
-		color #fff
+		color $white
 		z-index 10
 		// &:after
 		// 	z-index 1
@@ -94,7 +88,7 @@ header
 		// 	left 0
 		// 	width 15%
 		// 	height 100%
-		// 	background-color #fff
+		// 	background-color $white
 
 
 .top-line
@@ -107,14 +101,14 @@ header
 		display inline-block
 		margin-right 30px
 		a 
-			color #fff
+			color $white
 			display inline-block
 			text-transform uppercase
 			font-family $default-fontBold 
 			font-size 16px
 			border-bottom 2px solid transparent 
 			&:hover
-				color #e70023
+				color $red
 	&-btn
 		display none
 		cursor pointer
@@ -134,7 +128,7 @@ header
 		left 0
 		width 30px
 		height 2px
-		background-color #fff
+		background-color $white
 		transition .3s all ease
 	.bar-2
 		top 8px
@@ -149,7 +143,7 @@ header
 			transform translateY(-8px) rotate(45deg)
 
 	.current
-		border-bottom 2px solid #e70023
+		border-bottom 2px solid $red
 	
 .navigation
 	&-list.show
@@ -166,7 +160,7 @@ header
 		align-items center
 		transform: translateX(0)
 		transition all .3s ease
-		background-color #000
+		background-color $black
 		.navigation-item
 			margin 10px 0
 
@@ -183,22 +177,22 @@ header
 			content ''
 			width 6px
 			height 96%
-			background-image: linear-gradient(to bottom, #000000, #3b111c, #740f28, #ae012c, #e70023);
+			background-image: linear-gradient(to bottom, $black, #3b111c, #740f28, #ae012c, $red);
 	a
-		color #ffff
+		color $white
 		font-size 22px
 		&:hover
-			color #e70023
+			color $red
 
 .logo 
-	color #fff
+	color $white
 	position relative
 	a 
 		position absolute
 		bottom 0
 
 .main
-	color #fff
+	color $white
 	display flex
 	justify-content space-between
 
@@ -211,14 +205,14 @@ header
 		display inline-block
 		margin-left 10px
 		a
-			color #fff
+			color $white
 			display inline-block
 			font-size 16px
 			font-family $default-fontBold
 			text-transform uppercase
 			border-bottom 2px solid transparent
 			&:hover
-				color #e70023
+				color $red
 	&:after 
 		position absolute
 		top 4px
@@ -226,20 +220,20 @@ header
 		content ''
 		width 6px
 		height 100%
-		background-image: linear-gradient(to top, #000000, #3b111c, #740f28, #ae012c, #e70023);
+		background-image: linear-gradient(to top, $black, #3b111c, #740f28, #ae012c, $red);
 	.current
-		border-bottom 2px solid #e70023
+		border-bottom 2px solid $red
 
 .work
-	background-color #000
+	background-color $black
 	position relative
 	&-items 
 		display flex
 		justify-content: space-between
 		position relative
 	&-full
-		transform: translateX(-200%);
-		transition: all .8s ease;
+		transform: translateY(200%);
+		transition: all .7s ease;
 		border-radius: 3px;
 		position: fixed
 		width 100%
@@ -254,34 +248,76 @@ header
 		justify-content space-between
 		&-wrapper-img
 			width 50%
-			overflow scroll		
+			overflow scroll	
+			transform: translateX(-200%);
+			transition: all 2.5s ease;
 	&-text
 		width 50%
 		padding-left 30px
-
-		color #fff;
+		transform translateX(200%);
+		color $white;
+		transition: all 2.5s ease;
+	&-title 
+		font-size 40px
+	&-type 
+		margin 10px 0 20px
+	&-list 
+		margin 60px 0
+	&-description 
+		margin-bottom 60px
 	.opened
-		transform: translateX(0);
+		transform: translateY(0);
+		.work-text
+			transform translateX(0);
+		.work-full-wrapper-img
+			transform translateX(0);
+
 
 .close
 	&-btn
 		width 30px
 		height 30px
-		background-color #fff
+		background-color $white
 		position absolute
 		top 2%
 		right 2%
 		z-index 10
 		border-radius 50%
+		transition .2s all ease;
+		&:hover
+			transform scale(.8)
 	&-bar
 		position absolute
 		width 20px
 		height 3px
 		left 5px
 		top 14px
-		background-color #000
+		background-color $black
+		transition .2s all ease;
 .bar-2
 	transform rotate(45deg)
 .bar-1
 	transform rotate(-45deg)
+	
+// Buttons
+.btn
+	&-link
+		color $white
+		background-color $red
+		padding 10px 20px
+		border-radius 6px
+		border: 1px solid $red
+		display inline-block
+		margin-top 30px
+		transition all .2s ease
+		outline none
+		&:hover
+			background-color $white
+			color $black
+			border-color #fff
+
+
+
+
+
 @import "_media.styl" // Always at the end
