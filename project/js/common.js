@@ -43,7 +43,7 @@ $(document).ready(function() {
     e.preventDefault();    
     $(this).addClass('clicked');
   });
-
+  
 
 });
 

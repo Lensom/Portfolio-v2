@@ -66,6 +66,31 @@ a
 	padding 45px 30px
 
 
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+::-webkit-scrollbar-button {
+  background-color: #666;
+}
+::-webkit-scrollbar-track {
+  background-color: #999;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: #fff;
+}
+::-webkit-scrollbar-thumb {
+  height: 50px;
+  background-color: #666;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-corner {
+  background-color: #999;
+}
+::-webkit-resizer {
+  background-color: #666;
+}
+
 header 
 	background-color $black
 	.wrapper
@@ -248,12 +273,12 @@ header
 		justify-content space-between
 		&-wrapper-img
 			width 50%
-			overflow scroll	
+			overflow-y scroll	
 			transform: translateX(-200%);
 			transition: all 2.5s ease;
 	&-text
 		width 50%
-		padding-left 30px
+		padding-left 60px
 		transform translateX(200%);
 		color $white;
 		transition: all 2.5s ease;
@@ -279,8 +304,8 @@ header
 		height 30px
 		background-color $white
 		position absolute
-		top 2%
-		right 2%
+		top 6.3%
+		right 3%
 		z-index 10
 		border-radius 50%
 		transition .2s all ease;
