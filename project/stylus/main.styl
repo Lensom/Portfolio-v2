@@ -267,7 +267,7 @@ header
 		background-color black
 		top 0
 		left 0		
-		z-index 10
+		z-index 15
 		display flex
 		align-self: center
 		justify-content space-between
@@ -287,16 +287,54 @@ header
 	&-type 
 		margin 10px 0 20px
 	&-list 
-		margin 60px 0
+		margin 60px 0 60px
+		li:first-child
+			margin-top 5px
+		
 	&-description 
 		margin-bottom 60px
+	&-tech 
+		margin-bottom 60px
+		li:first-child
+			margin-top 5px
+	&-item 
+		width 50%
+		height 100%
+		position relative
+		&:nth-child(2)
+			margin 0 30px
+	&-link 		
+		color $white
+		&:hover 
+			span
+				opacity 0
+		span
+			transition all .5s ease
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			display flex
+			align-self: center
+			justify-content center
+			align-items: center
+			background: rgba(255, 255, 255, .8)
+	&-link-job
+		color $white
+		display inline-block
+		border-bottom 2px solid $red
+		margin-left 5px
+		&:hover
+			color $red
+			border-color $white
+		
 	.opened
 		transform: translateY(0);
 		.work-text
 			transform translateX(0);
 		.work-full-wrapper-img
 			transform translateX(0);
-
 
 .close
 	&-btn

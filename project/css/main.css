@@ -392,7 +392,7 @@ header .wrapper {
   background-color: #000;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 15;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -430,10 +430,65 @@ header .wrapper {
   margin: 10px 0 20px;
 }
 .work-list {
-  margin: 60px 0;
+  margin: 60px 0 60px;
+}
+.work-list li:first-child {
+  margin-top: 5px;
 }
 .work-description {
   margin-bottom: 60px;
+}
+.work-tech {
+  margin-bottom: 60px;
+}
+.work-tech li:first-child {
+  margin-top: 5px;
+}
+.work-item {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+.work-item:nth-child(2) {
+  margin: 0 30px;
+}
+.work-link {
+  color: #fff;
+}
+.work-link:hover span {
+  opacity: 0;
+}
+.work-link span {
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(255,255,255,0.8);
+}
+.work-link-job {
+  color: #fff;
+  display: inline-block;
+  border-bottom: 2px solid #e70023;
+  margin-left: 5px;
+}
+.work-link-job:hover {
+  color: #e70023;
+  border-color: #fff;
 }
 .work .opened {
   -webkit-transform: translateY(0);
