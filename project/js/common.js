@@ -43,7 +43,13 @@ $(document).ready(function() {
     e.preventDefault();    
     $(this).addClass('clicked');
   });
-  
 
 });
 
+var cube = new Cube({
+  cubeWrapperSelector: '.CubeWrapper',
+  cubeSelector: '.Cube',
+  frontSideClass: 'Cube-side--front',
+  secondSideClass: 'Cube-side--second',
+  transitionTime: 300
+});

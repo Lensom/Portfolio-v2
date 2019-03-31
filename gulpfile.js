@@ -24,6 +24,8 @@ var uglify         = require('gulp-uglify');
 gulp.task('js', gulp.series( function(){
 	return gulp.src([
 		'project/js/jquery-3.3.1.min.js', // Add optional scripts
+		'project/js/feature.js',
+		'project/js/cube.js',
 		'project/js/common.js', // Always at the end
 		])
 	.pipe(plumber())
