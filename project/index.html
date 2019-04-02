@@ -27,7 +27,8 @@
 	<meta property="og:image" content="" />
 	<!-- css -->
 	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<!-- <link rel="stylesheet" href="css/cube.css"> -->
+	<link rel="stylesheet" href="css/cube.css">
+	<link rel="stylesheet" href="css/nice-select.css">
 	<link rel="stylesheet" href="css/main.css">
 
 </head>
@@ -99,14 +100,14 @@
 			<div class="work-items">
 				<div class="work-item">
 					<div class="work-img-wrapper">						
-						<a href="#" class="work-link" data-target="1">
-							<img src="img/m3-preload2.png" alt="">
+						<a href="#" class="work-link" data-target="2">
+							<img src="img/ccom-preload.png" alt="">
 							<span>
-								<img src="img/m3.png" alt="">
+								<img src="img/ccom-logo.png" alt="">
 							</span>
 						</a>
 					</div>
-					<div class="work-full" id="1">
+					<div class="work-full" id="2">
 						<a href="#" class="close-btn">
 							<span class="close-bar bar-1"></span>
 							<span class="close-bar bar-2"></span>
@@ -143,30 +144,33 @@
 				</div>
 				<div class="work-item">
 					<div class="work-img-wrapper">
-						<a href="#" class="work-link" data-target="1">
+						<a href="#" class="work-link" data-target="3">
 							<img src="img/m3-preload2.png" alt="">
 							<span>
 								<img src="img/m3.png" alt="">
 							</span>
 						</a>
 					</div>
-					<div class="work-full" id="1">
+					<div class="work-full" id="3">
 						<a href="#" class="close-btn">
 							<span class="close-bar bar-1"></span>
 							<span class="close-bar bar-2"></span>
 						</a>
 						<div class="work-full-wrapper-img">
-							<img src="img/aparment.png" alt="">
+							<img src="img/ccom.png" alt="">
 						</div>
 						<div class="work-text">
-							<h2 class="work-title">M3 Architects</h2>
-							<h3 class="work-type">Одностраничный сайт</h3>
-							Ссылка на работу: <a href="https://apartment.od.ua/" class="work-link-job" target="_blank">https://apartment.od.ua/</a>
+							<h2 class="work-title">CCOM</h2>
+							<h3 class="work-type">Корпоративный сайт</h3>
+							Ссылка на работу: <a href="https://ccom.cz/" class="work-link-job" target="_blank">https://ccom.cz/</a>
 							<div class="work-list">
 								Выполненная работа:
 								<ul>
 									<li>
 										- Верстка
+									</li>
+									<li>
+										- Контент
 									</li>
 								</ul>
 							</div>
@@ -175,14 +179,13 @@
 								<ul>
 									<li class="tech-item">- HTML/CSS</li>
 									<li class="tech-item">- jQuery</li>
-									<li class="tech-item">- Google API</li>
 								</ul>
 							</div>
 							<div class="work-description">
-								Верстка одностраничного веб-сайта для компании по созданию интерьеров. Сайт связан с CMS WordPress. Подключены
-								слайдеры, отправка форм, Google карта через API.
+								Верстка корпоративного веб-сайта для компании по созданию дизайна, бренда. Сайт связан с CMS WordPress. Подключены
+								слайдеры, отправка форм, установлена многоязычность.
 							</div>
-							<a href="https://apartment.od.ua/" class="btn btn-link" target="_blank">Посетить веб-сайт</a>
+							<a href="https://ccom.cz/" class="btn btn-link" target="_blank">Посетить веб-сайт</a>
 						</div>
 					</div>
 				</div>
@@ -234,8 +237,8 @@
 			</div>
 		</div>
 	</div>
-
-	<!-- <div class="Background"></div>
+<!-- 
+	<div class="Background"></div>
 
 	<div class="Header">
 
@@ -263,9 +266,38 @@
 			</div> -->
 
 
-			<footer>
 
-			</footer>
+			<div class="form-section">
+				<div class="wrapper">
+						<div class="form-wrapper">
+							<div class="form-text">
+									lorem lorem lorem lorem lorem <br>
+									lorem lorem lorem lorem <br>
+									lorem lorem lorem lorem lorem  <br>
+									lorem lorem lorem .
+							</div>					
+						<form action="https://formspree.io/magurawork@gmail.com" method="POST">
+							<div class="form-group">
+								<input type="text" class="form-input" name="name" placeholder="Ваше имя" required>
+								<input type="mail" class="form-input" name="mail" placeholder="Ваш e-mail" required>
+								<select>
+									<option value="" selected style="display:none">Тип работы</option>
+									<option data-display="Select">Nothing</option>
+									<option value="1">Some option</option>
+									<option value="2">Another option</option>
+									<option value="4">Potato</option>
+								</select>
+							</div>
+							<div class="form-group text-submit">
+								<div class="form-gradient">
+									<textarea name="textarea" class="form-textarea" placeholder="Текст сообщения" required></textarea>
+								</div>
+								<input class="form-submit" type="submit" value="Отправить">
+							</div>							
+						</form>
+					</div>
+				</div>
+			</div>
 
 			<!-- You can add scripts to gulpfile.js -->
 			<script src="js/scripts.js"></script>

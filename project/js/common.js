@@ -44,6 +44,8 @@ $(document).ready(function() {
     $(this).addClass('clicked');
   });
 
+  $('select').niceSelect();
+
 });
 
 var cube = new Cube({
