@@ -423,7 +423,8 @@ header .wrapper {
 .work-item {
   width: 50%;
   height: 100%;
-  position: relative;
+  position: relative !important;
+  left: auto;
 }
 .work-item:nth-child(2) {
   margin: 0 30px;
@@ -701,6 +702,51 @@ form {
 .nice-select.open .list {
   width: 100%;
   border-radius: 6px;
+}
+svg {
+  width: 80px;
+  height: 80px;
+}
+path {
+  fill: #fff;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 50px 0;
+}
+.filter-link {
+  margin: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.filter-link:hover path {
+  fill: #e70023;
+}
+.filter-link:hover .filter-description {
+  border-bottom: 2px solid #e70023;
+}
+.filter-description {
+  text-align: center;
+  color: #fff;
+  border-bottom: 2px solid transparent;
+  padding-top: 20px;
+  padding-bottom: 4px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 @media (max-width: 1620px) {
   .wrapper {

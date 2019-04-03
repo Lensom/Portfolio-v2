@@ -48,10 +48,13 @@ $(document).ready(function() {
 
 });
 
-var cube = new Cube({
-  cubeWrapperSelector: '.CubeWrapper',
-  cubeSelector: '.Cube',
-  frontSideClass: 'Cube-side--front',
-  secondSideClass: 'Cube-side--second',
-  transitionTime: 300
-});
+// CUBE
+
+// var cube = new Cube({
+//   cubeWrapperSelector: '.CubeWrapper',
+//   cubeSelector: '.Cube',
+//   frontSideClass: 'Cube-side--front',
+//   secondSideClass: 'Cube-side--second',
+//   transitionTime: 300
+// });
+
