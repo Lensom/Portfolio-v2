@@ -46,6 +46,15 @@ $(document).ready(function() {
 
   $('select').niceSelect();
 
+
+  $('.filter-link').on('click', function(e){
+    e.preventDefault();
+    let showClass = $(this).data('target');
+    console.log(showClass)
+    console.log($('' + showClass + ''))
+    $('' + showClass + '').addClass('show');
+  }); 
+
 });
 
 // CUBE

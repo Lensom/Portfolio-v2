@@ -276,8 +276,7 @@ header
 	&-list 
 		margin 60px 0 60px
 		li:first-child
-			margin-top 5px
-		
+			margin-top 5px	
 	&-description 
 		margin-bottom 60px
 	&-tech 
@@ -287,10 +286,15 @@ header
 	&-item 
 		width 50%
 		height 100%
-		position relative !important
-		left auto
+		position relative
+		transition all .3s ease
 		&:nth-child(2)
 			margin 0 30px
+	&-item.show 
+		display block
+	&-item.hide
+		display none
+
 	&-link 		
 		color $white
 		&:hover 
@@ -514,6 +518,7 @@ path
 		padding-top 20px
 		padding-bottom 4px
 		transition all .3s ease
+
 
 
 @import "_media.styl" // Always at the end
