@@ -348,10 +348,13 @@ header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   position: relative;
+  min-height: 400px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 .work-full {
   -webkit-transform: translateY(200%);
@@ -420,22 +423,35 @@ header .wrapper {
 .work-tech li:first-child {
   margin-top: 5px;
 }
+.work-img-wrapper {
+  position: relative;
+  max-height: 350px;
+  overflow: hidden;
+  max-width: 500px;
+}
 .work-item {
-  width: 50%;
+  width: 33.3%;
+  max-height: 350px;
+  max-height: 100%;
   height: 100%;
   position: relative;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  margin: 0;
 }
 .work-item:nth-child(2) {
   margin: 0 30px;
 }
-.work-item.show {
-  display: block;
-}
 .work-item.hide {
-  display: none;
+  width: 0;
+}
+.work-item.show {
+  width: 33.3%;
+  max-width: 500px;
 }
 .work-link {
   color: #fff;
@@ -660,9 +676,9 @@ header .wrapper {
 .form-gradient {
   width: 100%;
   position: relative;
-  background: -webkit-gradient(linear, left top, right top, from(#f00), to(#800080));
-  background: -o-linear-gradient(left, #f00, #800080);
-  background: linear-gradient(to right, #f00, #800080);
+  background: -webkit-gradient(linear, right top, left top, from(#000), color-stop(#3b111c), color-stop(#740f28), color-stop(#ae012c), to(#e70023));
+  background: -o-linear-gradient(right, #000, #3b111c, #740f28, #ae012c, #e70023);
+  background: linear-gradient(to left, #000, #3b111c, #740f28, #ae012c, #e70023);
   padding: 2px;
   border-radius: 6px;
   min-height: 190px;

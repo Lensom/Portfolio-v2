@@ -49,10 +49,12 @@ $(document).ready(function() {
 
   $('.filter-link').on('click', function(e){
     e.preventDefault();
+    let workClass = $('.work-item');
     let showClass = $(this).data('target');
-    console.log(showClass)
-    console.log($('' + showClass + ''))
-    $('' + showClass + '').addClass('show');
+    let k = $("." + showClass + "");
+    workClass.removeClass('show');
+    workClass.addClass('hide');
+    k.addClass('show');
   }); 
 
 });
