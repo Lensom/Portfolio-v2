@@ -303,6 +303,17 @@ header .wrapper {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 100px;
+}
+.main-text {
+  font-size: 58px;
+}
+.main-span {
+  color: #e70023;
+}
+canvas.vanta-canvas {
+  left: 20% !important;
+  top: -1% !important;
 }
 .language {
   z-index: 3;
@@ -339,6 +350,36 @@ header .wrapper {
 }
 .language .current {
   border-bottom: 2px solid #e70023;
+}
+.skills {
+  background-color: #000;
+}
+.skills-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.skills-icon {
+  width: 75px;
+  height: 75px;
+  -webkit-filter: sepia(100%) hue-rotate(190deg) saturate(0.2);
+          filter: sepia(100%) hue-rotate(190deg) saturate(0.2);
+  margin: 20px;
+  -webkit-transition: all 0.3 ease;
+  -o-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  position: relative;
+}
+.skills-icon:hover {
+  -webkit-filter: none;
+          filter: none;
 }
 .work {
   background-color: #000;
@@ -535,16 +576,6 @@ header .wrapper {
   -o-transition: 0.2s all ease;
   transition: 0.2s all ease;
 }
-.bar-2 {
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-.bar-1 {
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
 .btn-link {
   color: #fff;
   background-color: #e70023;
@@ -590,6 +621,7 @@ header .wrapper {
 }
 .form-text {
   color: #fff;
+  font-size: 22px;
 }
 .form-submit {
   color: #fff;

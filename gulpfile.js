@@ -26,6 +26,9 @@ gulp.task('js', gulp.series( function(){
 		'project/js/jquery-3.3.1.min.js', // Add optional scripts
 		// 'project/js/feature.js',
 		// 'project/js/cube.js',
+		'project/js/typeit.min.js',
+		'project/js/three.r92.min.js',
+		'project/js/vanta.net.min.js',
 		'project/js/isotope.pkgd.min.js',
 		'project/js/jquery.nice-select.min.js',
 		'project/js/common.js', // Always at the end

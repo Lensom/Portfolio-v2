@@ -207,6 +207,15 @@ header
 	color $white
 	display flex
 	justify-content space-between
+	height 100px
+	&-text 
+		font-size 58px
+	&-span 
+		color $red
+
+canvas.vanta-canvas
+	left 20% !important
+	top: -1% !important
 
 .language
 	z-index 3
@@ -235,6 +244,32 @@ header
 		background-image: linear-gradient(to top, $black, #3b111c, #740f28, #ae012c, $red);
 	.current
 		border-bottom 2px solid $red
+
+.skills
+	background-color $black
+	// &-icons 
+	&-icons 
+		display flex
+		max-width: 600px
+		margin 0 auto
+		flex-wrap wrap
+		justify-content: center
+
+	&-icon
+		width 75px
+		height 75px
+		filter: sepia(100%) hue-rotate(190deg) saturate(.2);
+		margin 20px
+		transition all .3 ease
+		position relative
+		&:hover
+			filter none
+	// &-icon[title]:hover:after
+	// 	content attr(title)
+	// 	position absolute
+	// 	top: -100%
+	// 	left 0 
+
 
 .work
 	background-color $black
@@ -362,10 +397,6 @@ header
 		top 14px
 		background-color $black
 		transition .2s all ease;
-.bar-2
-	transform rotate(45deg)
-.bar-1
-	transform rotate(-45deg)
 	
 // Buttons
 .btn
@@ -400,6 +431,7 @@ header
 		width 300px
 	&-text 
 		color $white
+		font-size 22px
 	&-submit
 		color $white
 		background-color $red

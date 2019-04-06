@@ -57,6 +57,22 @@ $(document).ready(function() {
     k.addClass('show');
   }); 
 
+ new TypeIt('.main-text', {
+     speed: 50,
+     startDelay: 900
+   })
+   .type("Hello, <br> I'm <span class='main-span'>Alexey Rybalko</span> <br> Website Portfolio")
+   .go();
+
+  VANTA.NET({
+    el: "#header",
+    color: 0xff0000,
+    backgroundColor: 0x0,
+    points: 14.00,
+    maxDistance: 16.00,
+    spacing: 5.00
+  })
+
 });
 
 // CUBE
