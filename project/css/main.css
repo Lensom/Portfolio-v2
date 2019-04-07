@@ -123,6 +123,7 @@ a {
 }
 header {
   background-color: #000;
+  overflow: hidden;
 }
 header .wrapper {
   height: 100vh;
@@ -143,9 +144,24 @@ header .wrapper {
 .title {
   position: relative;
 }
+.title:after {
+  z-index: 1;
+  content: '';
+  position: absolute;
+  left: -22%;
+  width: 40%;
+  height: 6px;
+  bottom: -5px;
+  background: -webkit-gradient(linear, right top, left top, from(#000), color-stop(#3b111c), color-stop(#740f28), color-stop(#ae012c), to(#e70023));
+  background: -o-linear-gradient(right, #000, #3b111c, #740f28, #ae012c, #e70023);
+  background: linear-gradient(to left, #000, #3b111c, #740f28, #ae012c, #e70023);
+}
 .title h2 {
+  position: relative;
   color: #fff;
   z-index: 10;
+  font-size: 34px;
+  padding-bottom: 12px;
 }
 .top-line {
   display: -webkit-box;
@@ -290,6 +306,7 @@ header .wrapper {
 .logo {
   color: #fff;
   position: relative;
+  width: 138px;
 }
 .logo a {
   position: absolute;
@@ -314,6 +331,7 @@ header .wrapper {
 canvas.vanta-canvas {
   left: 20% !important;
   top: -1% !important;
+  width: 100% !important;
 }
 .language {
   z-index: 3;
@@ -360,15 +378,37 @@ canvas.vanta-canvas {
   display: flex;
   max-width: 600px;
   margin: 0 auto;
+  margin-right: 0;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
+.skills-info {
+  color: #fff;
+  font-size: 14px;
+}
+.skills-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 40px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.skills-title {
+  font-size: 24px;
+}
+.skills .subtitle {
+  font-family: "ComfortaaBold", sans-serif;
+  font-size: 22px;
+  padding-top: 20px;
+}
 .skills-icon {
-  width: 75px;
-  height: 75px;
+  width: 65px;
+  height: 65px;
   -webkit-filter: sepia(100%) hue-rotate(190deg) saturate(0.2);
           filter: sepia(100%) hue-rotate(190deg) saturate(0.2);
   margin: 20px;
@@ -380,6 +420,33 @@ canvas.vanta-canvas {
 .skills-icon:hover {
   -webkit-filter: none;
           filter: none;
+}
+.about {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 0;
+}
+.about-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 50px 0;
+}
+.about-text {
+  width: 33.3%;
+}
+.about-text:nth-child(2) {
+  margin: 0 180px;
+}
+.about-text p {
+  margin-bottom: 20px;
+}
+.about-text .btn {
+  display: inline-block;
+  margin-top: 6px;
 }
 .work {
   background-color: #000;
@@ -576,9 +643,16 @@ canvas.vanta-canvas {
   -o-transition: 0.2s all ease;
   transition: 0.2s all ease;
 }
-.btn-link {
+.btn {
   color: #fff;
   background-color: #e70023;
+}
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+.btn-link {
+  color: #fff;
   padding: 10px 20px;
   border-radius: 6px;
   border: 1px solid #e70023;
@@ -590,9 +664,21 @@ canvas.vanta-canvas {
   outline: none;
 }
 .btn-link:hover {
+  border-color: #fff;
+}
+.btn-click {
+  border: 2px solid #e70023;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+.btn-click:hover {
   background-color: #fff;
   color: #000;
-  border-color: #fff;
+}
+.btn-download {
+  padding: 10px 40px;
+  border-radius: 6px;
+  border: 2px solid #e70023;
 }
 .form-section {
   padding-top: 40px;
@@ -626,7 +712,7 @@ canvas.vanta-canvas {
 .form-submit {
   color: #fff;
   background-color: #e70023;
-  padding: 10px 20px;
+  padding: 10px 30px;
   border-radius: 6px;
   border: 2px solid #e70023;
   display: inline-block;
@@ -713,7 +799,7 @@ canvas.vanta-canvas {
   background: linear-gradient(to left, #000, #3b111c, #740f28, #ae012c, #e70023);
   padding: 2px;
   border-radius: 6px;
-  min-height: 190px;
+  height: 190px;
 }
 form {
   display: -webkit-box;
@@ -754,6 +840,9 @@ form {
   border: 2px solid #e70023;
   background-color: #000;
   color: #fff;
+}
+.nice-select .option {
+  color: #000;
 }
 .nice-select.open .list {
   width: 100%;
@@ -804,6 +893,49 @@ path {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+.start-box {
+  border-radius: 25px;
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.start-title {
+  font-size: 28px;
+}
+.start-text {
+  font-size: 22px;
+  padding-top: 5px;
+}
+.start-btn {
+  padding-top: 10px;
+}
+.copyright {
+  color: #fff;
+  padding-top: 14px;
+}
+footer {
+  background-color: #000;
+}
+footer .social-item {
+  display: inline-block;
+  margin: 0 20px;
+}
+footer .social a {
+  font-size: 28px;
+}
+footer .social-list:after {
+  height: 6px;
+  width: 100%;
+  bottom: -5px;
+  right: 0;
+  top: inherit;
+}
 @media (max-width: 1620px) {
   .wrapper {
     width: 1440px;
@@ -819,10 +951,49 @@ path {
     width: 992px;
     padding: 45px 40px;
   }
+  .form-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .form-text {
+    margin-bottom: 20px;
+  }
+  .form-text br {
+    display: none;
+  }
 }
 @media (max-width: 992px) {
   .wrapper {
     width: 768px;
+  }
+  .start-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .start-title {
+    padding-bottom: 20px;
+  }
+  .start-text {
+    padding: 0 0 20px 0;
+  }
+  .main-text {
+    font-size: 44px;
+  }
+  footer .social-item {
+    margin: 0 16px;
+  }
+  footer .social-item a {
+    font-size: 22px;
+  }
+  .skills-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
   }
 }
 @media (max-width: 768px) {
@@ -842,9 +1013,80 @@ path {
     display: block;
     margin-top: 5px;
   }
+  form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .form-group {
+    width: 100%;
+  }
+  .form-textarea {
+    height: 100%;
+  }
+  .form-submit {
+    margin: 30px auto 0;
+    padding: 10px 50px;
+  }
+  .nice-select {
+    margin-bottom: 30px;
+  }
+  .text-submit {
+    margin: 0;
+  }
+  canvas.vanta-canvas {
+    left: 3% !important;
+    top: 17% !important;
+  }
+  .main {
+    margin-top: -320px;
+    padding-top: 0;
+  }
+  .main-text {
+    width: 100%;
+    text-align: center;
+  }
+  .footer {
+    padding: 50px 0 20px;
+  }
+  .footer .social {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer .social-list {
+    margin: 20px 0;
+  }
+  .skills-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .skills-icons {
+    margin-top: 40px;
+    margin-right: auto;
+    max-width: 100%;
+  }
+  .skills-icon {
+    margin: 15px;
+  }
 }
 @media (max-width: 560px) {
   .wrapper {
     padding: 30px 15px;
+  }
+  .main-text {
+    font-size: 38px;
+  }
+}
+@media (max-width: 380px) {
+  .main-text {
+    font-size: 28px;
   }
 }

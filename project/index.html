@@ -90,9 +90,33 @@
 
 	</header>
 
-	<div class="about">
+	<div class="about" id="about">
 		<div class="wrapper">
-
+			<div class="title">
+				<h2>About me</h2>
+			</div>
+			<div class="about-wrapper">
+				<div class="about-text">
+					<p>Hey! My name is Alex.
+					I am a web developer based in Odessa, Ukraine.</p>
+					<p>I have been working as a front-end developrt in a studio and freelance developer since 2017.</p> 
+					<p>I’ve always been someone
+					who has both a creative and a logical side.</p>
+					<p>Growing up, my favorite classes were usually literature & math.
+					When I discovered web development my first year of university, I realized it would be the perfect fit.</p>
+				
+				</div>
+				<div class="about-text">
+					<p>I am specializing in creating websites for businesses and small businesses. You shouldn’t have to settle for generic
+					templates.</p> 
+					<p>I provide custom designs at reasonable prices. Frequently, your customers will get a good one.</p>
+				</div>
+				<div class="about-text">
+					<p>You can download my CV.</p>
+					<p>Just use this button</p>
+					<a href="#" class="btn btn-download" download>Download CV</a>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -103,7 +127,21 @@
 			</div>
 			<div class="skills-wrapper">
 				<div class="skills-info">
-
+					<div class="skills-title">
+						What I do
+					</div>
+					<div class="subtitle">Front-end</div>
+					HTML5, CSS3, Javascript, jQuery, Sass, Stylus, Bootstrap
+					<div class="subtitle">Back-end</div>
+					NodeJS, PHP, APIs
+					<div class="subtitle">CMS</div>
+					Wordpress, Opencart, Jekyll
+					<div class="subtitle">Frameworks</div>
+					Vue, React
+					<div class="subtitle">Cloud</div>
+					Google API, Firebase
+					<div class="subtitle">Additional Software</div>
+					Adobe Photoshop/Illustrator, Avocode, VSCode, SublimeText 3
 				</div>
 				<div class="skills-icons">
 					<img title="Photoshop" class="skills-icon" src="img/icons/Adobe_Photoshop_CS6_icon.svg" alt="">
@@ -117,8 +155,8 @@
 					<img class="skills-icon" src="img/icons/Stylus.svg" alt="">
 					<img class="skills-icon" src="img/icons/Wordpress-Logo.svg" alt="">
 					<img class="skills-icon" src="img/icons/css-3.svg" alt="">
-					<img class="skills-icon" src="img/icons/ftp-upload.svg" alt="">
-					<img class="skills-icon" src="img/icons/github-logo.svg" alt="">
+					<img class="skills-icon" src="img/icons/ftp.svg" alt="">
+					<img class="skills-icon" src="img/icons/github.svg" alt="">
 					<img class="skills-icon" src="img/icons/gulp.svg" alt="">
 					<img class="skills-icon" src="img/icons/html5.svg" alt="">
 					<img class="skills-icon" src="img/icons/illustrator.svg" alt="">
@@ -131,12 +169,29 @@
 				</div>
 			</div>
 		</div>
+
+		
+	</div>
+
+
+	<div class="start-box">
+		<div class="start-title">
+			Start a project
+		</div>
+		<div class="start-text">
+			Interested in working together? Click
+		</div>
+		<div class="start-btn">
+			<a href="#" class="btn btn-click">
+				Let's do this
+			</a>
+		</div>
 	</div>
 
 	<div class="work" id="work">
 		<div class="wrapper">
 			<div class="title">
-				<h2>Мои работы</h2>
+				<h2>Works</h2>
 			</div>
 			<div class="filters">
 				<a href="#" class="filter-link" data-target="work-item">
@@ -351,18 +406,18 @@
 								<input type="text" class="form-input" name="name" placeholder="Ваше имя" required>
 								<input type="mail" class="form-input" name="mail" placeholder="Ваш e-mail" required>
 								<select>
-									<option value="" selected style="display:none">Тип работы</option>
-									<option data-display="Select">Nothing</option>
-									<option value="1">Some option</option>
-									<option value="2">Another option</option>
-									<option value="4">Potato</option>
+									<option value="" selected style="display:none">Type a website</option>
+									<option value="Landing page">Landing page</option>
+									<option value="E-shop">E-shop</option>
+									<option value="Multipage website">Multipage website</option>
+									<option value="Fix bugs">Fix bugs</option>
 								</select>
 							</div>
 							<div class="form-group text-submit">
 								<div class="form-gradient">
 									<textarea name="textarea" class="form-textarea" placeholder="Текст сообщения" required></textarea>
 								</div>
-								<input class="form-submit" type="submit" value="Отправить">
+								<input class="form-submit" type="submit" value="Send">
 							</div>							
 						</form>
 					</div>
@@ -370,8 +425,28 @@
 			</div>
 
 
-			<footer>
-				http://prntscr.com/n8byni
+			<footer class="footer">
+					<div class="wrapper">
+						<div class="social">
+						
+							<div class="logo">
+								<a href="#">Logotype</a>
+							</div>
+						
+							<ul class="social-list">
+								<!-- Linkedin, github, instagram, freelance, telegram, gmail -->
+								<li class="social-item"><a href="https://www.linkedin.com/in/alex-rybalko-20351714a/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+								<li class="social-item"><a href="https://github.com/Lensom" target="_blank"><i class="fa fa-github"></i></a></li>
+								<li class="social-item"><a href="https://www.instagram.com/magurawork/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+								<li class="social-item"><a href="https://freelancehunt.com/profile/show/magura.html" target="_blank"><i class="fa fa-user-circle"></i></a></li>
+								<li class="social-item"><a href="https://t.me/magurawork" target="_blank"><i class="fa fa-telegram"></i></a></li>
+								<li class="social-item"><a href="mailto:magurawork@gmail.com?subject=Сообщение от сайта портфолио"><i class=" fa fa-envelope"></i></a></li>
+							</ul>
+							<div class="copyright">
+								Copyright © 2019
+							</div>
+						</div>
+					</div>
 			</footer>
 
 			<!-- You can add scripts to gulpfile.js -->

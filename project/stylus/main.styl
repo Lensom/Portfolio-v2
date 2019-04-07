@@ -80,6 +80,7 @@ a
 
 header 
 	background-color $black
+	overflow hidden
 	.wrapper
 		height 100vh		
 		display flex
@@ -89,18 +90,21 @@ header
 
 .title
 	position relative
+	&:after
+			z-index 1
+			content: ''
+			position absolute
+			left -22%
+			width 40%
+			height 6px
+			bottom: -5px
+			background linear-gradient(to left, $black, #3b111c, #740f28, #ae012c, $red)
 	h2
+		position relative
 		color $white
 		z-index 10
-		// &:after
-		// 	z-index 1
-		// 	content: ''
-		// 	position absolute
-		// 	top 0
-		// 	left 0
-		// 	width 15%
-		// 	height 100%
-		// 	background-color $white
+		font-size 34px
+		padding-bottom 12px
 
 
 .top-line
@@ -199,6 +203,7 @@ header
 .logo 
 	color $white
 	position relative
+	width 138px
 	a 
 		position absolute
 		bottom 0
@@ -216,6 +221,7 @@ header
 canvas.vanta-canvas
 	left 20% !important
 	top: -1% !important
+	width 100% !important
 
 .language
 	z-index 3
@@ -252,23 +258,53 @@ canvas.vanta-canvas
 		display flex
 		max-width: 600px
 		margin 0 auto
+		margin-right 0
 		flex-wrap wrap
 		justify-content: center
+	&-info 
+		color #fff
+		font-size 14px
+	&-wrapper 
+		display flex
+		padding 40px 0
+		justify-content: space-between
+	&-title 
+		font-size 24px
+	.subtitle 
+		font-family $default-fontBold
+		font-size 22px
+		padding-top 20px
 
 	&-icon
-		width 75px
-		height 75px
+		width 65px
+		height 65px
 		filter: sepia(100%) hue-rotate(190deg) saturate(.2);
 		margin 20px
 		transition all .3 ease
 		position relative
 		&:hover
 			filter none
-	// &-icon[title]:hover:after
-	// 	content attr(title)
-	// 	position absolute
-	// 	top: -100%
-	// 	left 0 
+
+
+.about
+	background-color $black
+	color $white 
+	padding: 40px 0
+	&-wrapper
+		display flex
+		justify-content space-between
+		padding 50px 0
+	&-text 
+		width 33.3%
+		&:nth-child(2)
+			margin 0 180px
+		p 
+			margin-bottom 20px
+		.btn
+			display inline-block
+			margin-top 6px
+	
+		
 
 
 .work
@@ -400,9 +436,13 @@ canvas.vanta-canvas
 	
 // Buttons
 .btn
+	color $white
+	background-color $red
+	&:hover 
+		background-color $white
+		color $black
 	&-link
-		color $white
-		background-color $red
+		color $white		
 		padding 10px 20px
 		border-radius 6px
 		border: 1px solid $red
@@ -411,9 +451,19 @@ canvas.vanta-canvas
 		transition all .2s ease
 		outline none
 		&:hover
+			border-color #fff
+	&-click
+		border 2px solid $red
+		padding 10px 20px
+		border-radius 6px
+		&:hover
 			background-color $white
 			color $black
-			border-color #fff
+	&-download 
+		padding 10px 40px
+		border-radius 6px
+		border 2px solid $red
+
 
 // FORM
 
@@ -435,7 +485,7 @@ canvas.vanta-canvas
 	&-submit
 		color $white
 		background-color $red
-		padding 10px 20px
+		padding 10px 30px
 		border-radius 6px
 		border: 2px solid $red
 		display inline-block
@@ -496,7 +546,7 @@ canvas.vanta-canvas
 		background linear-gradient(to left, $black, #3b111c, #740f28, #ae012c, $red)
 		padding 2px
 		border-radius 6px
-		min-height 190px
+		height 190px
 
 form
 	display flex
@@ -525,6 +575,8 @@ form
 		border 2px solid $red
 		background-color $black
 		color $white
+	.option
+		color $black
 
 .nice-select.open 
 	.list
@@ -564,6 +616,41 @@ path
 		padding-bottom 4px
 		transition all .3s ease
 
+.start
+	&-box 
+		border-radius 25px
+		max-width 1280px
+		margin 0 auto
+		background-color $white
+		padding 20px
+		display flex
+		justify-content: space-around
+	&-title
+		font-size 28px
+	&-text
+		font-size 22px
+		padding-top 5px
+	&-btn 
+		padding-top 10px
+	
+.copyright
+	color $white
+	padding-top 14px
 
+footer
+	background-color $black
+	.social
+		&-item
+			display inline-block
+			margin 0 20px
+		a 
+			font-size 28px
+		&-list 
+			&:after 
+				height 6px
+				width 100%
+				bottom -5px
+				right 0
+				top inherit
 
 @import "_media.styl" // Always at the end

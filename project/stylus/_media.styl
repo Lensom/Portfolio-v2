@@ -7,6 +7,7 @@
 	.wrapper
 		width 1440px
 
+
 @media (max-width : 1440px)
 	.wrapper
 		width 1200px
@@ -17,12 +18,42 @@
 	.wrapper
 		width 992px
 		padding 45px 40px
+	
+	.form
+		&-wrapper
+			flex-direction column
+		&-text 
+			margin-bottom 20px
+			br 
+				display none
+
 
 /* Medium Devices, Desktops */
 @media (max-width : 992px)
 	/**/
 	.wrapper
 		width 768px
+	.start
+		&-box 
+			flex-direction: column
+			text-align center
+		&-title 
+			padding-bottom 20px
+		&-text 
+			padding 0 0 20px 0
+	.main 
+		&-text 
+			font-size 44px
+	footer 
+		.social-item
+			margin 0 16px
+			a 
+				font-size 22px
+	.skills
+		&-icon 
+			width 50px
+			height 50px
+			margin 0 10px
 
 /* Small Devices, Tablets */
 @media (max-width : 768px)
@@ -38,12 +69,58 @@
 		&-btn 
 			display block
 			margin-top 5px
+	form
+		flex-direction column
+	.form
+		&-group 
+			width 100%
+		&-textarea 
+			height 100%
+		&-submit 
+			margin 30px auto 0
+			padding 10px 50px
+	.nice-select
+		margin-bottom 30px
+	.text-submit
+		margin 0
+	canvas.vanta-canvas
+		left 3% !important
+		top 17% !important
+	.main
+		margin-top -320px
+		padding-top 0
+		&-text 
+			width 100%
+			text-align center
+	.footer 
+		padding 50px 0 20px
+		.social 
+			flex-direction column
+			align-items center
+			&-list
+				margin 20px 0
+	.skills
+		&-wrapper 
+			flex-direction: column
+		&-icons 
+			margin-top 40px
+			margin-right: auto
+			max-width: 100%
+		&-icon 
+			margin 15px
+		
 
 /* Extra Small Devices, Phones */
 @media (max-width : 560px)
-		.wrapper 
-			padding 30px 15px
+	.wrapper 
+		padding 30px 15px
+	.main
+		&-text
+			font-size 38px	
+	
+		
 
 /* Custom, iPhone Retina */
-@media (max-width : 320px)
-	/**/
+@media (max-width : 380px)
+	.main-text
+		font-size 28px
