@@ -461,8 +461,8 @@ canvas.vanta-canvas {
           justify-content: flex-start;
   position: relative;
   min-height: 400px;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .work-full {
   -webkit-transform: translateY(200%);
@@ -498,6 +498,9 @@ canvas.vanta-canvas {
   -webkit-transition: all 2.5s ease;
   -o-transition: all 2.5s ease;
   transition: all 2.5s ease;
+}
+.work-full-wrapper-img img {
+  margin: 0 auto;
 }
 .work-text {
   width: 50%;
@@ -550,9 +553,8 @@ canvas.vanta-canvas {
       -ms-transform-origin: center;
           transform-origin: center;
   margin: 0;
-}
-.work-item:nth-child(2) {
-  margin: 0 30px;
+  padding: 0 15px;
+  margin-bottom: 30px;
 }
 .work-item.hide {
   width: 0;
@@ -642,6 +644,16 @@ canvas.vanta-canvas {
   -webkit-transition: 0.2s all ease;
   -o-transition: 0.2s all ease;
   transition: 0.2s all ease;
+}
+.close-bar.bar-1 {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.close-bar.bar-2 {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .btn {
   color: #fff;
@@ -963,6 +975,9 @@ footer .social-list:after {
   .form-text br {
     display: none;
   }
+  .about-text:nth-child(2) {
+    margin: 0 30px;
+  }
 }
 @media (max-width: 992px) {
   .wrapper {
@@ -994,6 +1009,43 @@ footer .social-list:after {
     width: 50px;
     height: 50px;
     margin: 0 10px;
+  }
+  .work-type {
+    margin: 10px 0;
+  }
+  .work-title {
+    font-size: 32px;
+  }
+  .work-link-job {
+    margin-left: 0;
+  }
+  .work-list {
+    margin: 30px 0 40px;
+  }
+  .work-tech {
+    margin-bottom: 40px;
+  }
+  .work-description {
+    margin-bottom: 10px;
+  }
+  .about-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-text {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .about-text:nth-child(2) {
+    margin: 30px 0 0 0;
+  }
+  .about-text p {
+    margin-bottom: 0;
+  }
+  .about-text .btn {
+    margin-top: 30px;
   }
 }
 @media (max-width: 768px) {
@@ -1075,6 +1127,25 @@ footer .social-list:after {
   }
   .skills-icon {
     margin: 15px;
+  }
+  .work-full {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: scroll;
+  }
+  .work-full-wrapper-img {
+    width: 100%;
+    min-height: 450px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .work-text {
+    padding-left: 0;
+    width: 100%;
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 560px) {

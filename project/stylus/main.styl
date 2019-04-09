@@ -315,7 +315,7 @@ canvas.vanta-canvas
 		justify-content: flex-start
 		position relative
 		min-height 400px
-		flex-wrap nowrap
+		flex-wrap wrap
 	&-full
 		transform: translateY(200%);
 		transition: all .7s ease;
@@ -336,6 +336,8 @@ canvas.vanta-canvas
 			overflow-y scroll	
 			transform: translateX(-200%);
 			transition: all 2.5s ease;
+			img 
+				margin 0 auto
 	&-text
 		width 50%
 		padding-left 60px
@@ -370,8 +372,8 @@ canvas.vanta-canvas
 		transition all .5s ease
 		transform-origin center
 		margin 0
-		&:nth-child(2)
-			margin 0 30px
+		padding 0 15px
+		margin-bottom 30px
 	&-item.hide
 		width 0
 	&-item.show
@@ -433,6 +435,10 @@ canvas.vanta-canvas
 		top 14px
 		background-color $black
 		transition .2s all ease;
+	&-bar.bar-1
+		transform rotate(45deg)
+	&-bar.bar-2
+		transform rotate(-45deg)
 	
 // Buttons
 .btn
